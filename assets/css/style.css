@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    
+
+}
+body {
+    background-color: white;
+    font-size: 62.5%;
+    font-family: 'Playfair Display SC', serif !important;
+}
+
+
+
+/* Primera Pagina */
+
+h1 {
+    font-size: 5.5rem;
+}
+h2 {
+    font-size: 4.5rem;
+}
+h3 {
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.logo {
+    flex: 0 0 50%;
+    background-color: rgb(243, 243, 9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.logo h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 2;
+}
+.logo span {
+    font-size: 60px;
+    line-height: 1;
+}
+
+.menu-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    padding-top: 50px;
+}
+.menu-links ul {
+    width: 100%;
+}
+.menu-links ul li {
+    padding: 10px;
+    color: rgb(105, 105, 99);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.menu-links ul li:hover {
+    background-color: rgb(105, 105, 99);
+    color: white;
+}
+.scrolldown {
+    font-size: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    transform: rotate(-90deg);
+}
+.scrolldown::before {
+    display: inline-block;
+    content: "";
+    border-top: 1px solid black;
+    width: 65px;
+    margin: 0 10px 0 0;
+    transform: translateY(10px);
+}
+.text {
+    position: absolute;
+    top: 25%;
+    right: 180px;
+    transform: translateY(-50%);
+    text-align: right;
+    color: rgb(105, 105, 99);
+}
+.text .title {
+    font-size: 80px;
+    flex-basis: 0;
+
+}
+.text p {
+    font-size: 20px;
+}
+.contacto {
+    position: absolute;
+    top: 60%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: rgb(243, 243, 9);
+    padding: 30px 180px 30px 30px;
+}
+.contacto a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 3px solid black;
+    padding-bottom: 5px;
+}
+.fa-play {
+    color: white;
+    font-size: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.media {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+}
+.media ul li {
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    color: rgb(105, 105, 99);
+    cursor: pointer;
+    border-radius: 20%;
+}
+.media ul li:hover {
+    background-color: rgb(243, 243, 9);
+}
+.ellipse-container {
+    width: 600px;
+    height: 600px;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    margin: 0 auto;
+    
+}
+.ellipse {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    border-style: solid;
+}
+
+.ellipse.thin {
+    width: 100%;
+    height: 100%;
+/*  border-width: 1px; */
+    border-style: solid;
+    border-color: gray;
+    opacity: .5;
+}
+.ellipse.thick {
+    width: 93%;
+    height: 93%;
+    border-width: 10px;
+    border-color: white;
+    transform: rotate(-45deg);
+    top: 20px;
+    left: 20px;
+}
+.ellipse.yellow {
+    width: 93%;
+    height: 93%;
+    border-width: 10px;
+    border-color: rgb(243, 243, 9) transparent;
+    transform: rotate(-45deg);
+    top: 20px;
+    left: 20px;
+    animation: ellipseRotate 2s ease-in-out infinite;
+}
+@keyframes ellipseRotate  {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(243, 243, 9);
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.overlay h1 {
+    font-size: 80px;
+    letter-spacing: 20px;
+}
+.overlay span {
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.contenedor_animacion {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.portafolio {
+    font-size: 100px;
+}
+.portafolio:hover {
+    color: black;
+    background-color: white;
+    border-radius: 2px;
+}
+
+
+@media (max-width: 790px) {
+    .overlay h1 {
+        font-size: 60px;
+        letter-spacing: 10px;
+    }
+    .overlay span {
+        font-size: 15px;
+        letter-spacing: 3px;
+       
+    }
+    .text {
+        display: none;
+        position: absolute;
+        top: 25%;
+        right: 180px;
+        transform: translateY(-50%);
+        text-align: right;
+        color: rgb(105, 105, 99);
+    }
+    .nav {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+    .menu-links {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 0px;
+    }
+    .menu-links ul {
+        width: 100%;
+    }
+    .menu-links ul li {
+        padding: 10px;
+        color: rgb(105, 105, 99);
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .scrolldown {
+        display: none;
+
+        
+    }
+    .contacto {
+        position: absolute;
+        top: 60%;
+        right: 0;
+        transform: translateY(-50%);
+        background-color: rgb(243, 243, 9);
+        padding: 30px 180px 30px 30px;
+    }
+    .contacto a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 3px solid black;
+        padding-bottom: 5px;
+    }
+    .portafolio {
+        font-size: 60px;
+    }
+    
+   
+}
+@media (max-width: 1200px ) {
+    
+    .text {
+        position: absolute;
+        top: 25%;
+        left: 400px;
+        transform: translateY(-50%);
+        text-align: left;
+        color: rgb(105, 105, 99);
+    }
+    .text .title {
+        font-size: 70px;
+        
+    
+    }
+    .text p {
+        font-size: 15px;
+    }
+    
+    
+}
+
+/* Segunda Pagina en adelante*/
+
+ #bg, #fg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 35px;
+    font-weight: 600;
+
+}
+article {
+    position: absolute;
+    top: 0;
+    color: black;
+    
+}
+
+
+h6 {
+    padding: 12px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    background-color: rgb(243, 243, 9);
+    border-radius: 2px;
+}
+sub {
+    font-size: 12px;
+    display: block;
+}
+
+   
+.secciones {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    
+}
+
+
+
+.secciones:nth-child(1) {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 20%;
+
+}
+.secciones:nth-child(2) {
+    
+    color: white;
+    border-radius: 5px;
+    background-image: linear-gradient(200deg, hsla(187, 100%, 69%, 1),
+                                        hsla(187, 100%, 69%, 0) 78% ),
+                        linear-gradient(130deg, hsla(300, 100%, 69%, 1),
+                                        hsla(300, 100%, 69%, 0) 78% ),
+                        linear-gradient(330deg, hsla(0, 100%, 69%, 1),
+                                        hsla(0, 100%, 69%, 0) 78% );
+    margin: 0 auto;
+    padding: 10%;
+    text-align: center;
+
+}
+.habilidades {
+    color: black;
+    font-weight: 900;
+}
+.habilidades:hover {
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+}
+.introduccion:hover {
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+}
+
+
+
+.secciones:nth-child(3) {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: start;
+    padding: 1%;
+}
+.secciones:nth-child(4) {
+    background-color: black;
+}
+.final {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin-top: 5%;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.final p {
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 1px;
+}
